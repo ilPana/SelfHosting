@@ -1,7 +1,7 @@
 volumes:
-  nginxpm_data:
+  nginx_data:
     external: true
-  nginxpm_letsencrypt:
+  nginx_letsencrypt:
     external: true
 
 networks:
@@ -9,7 +9,7 @@ networks:
     external: true
 
 services:
-  nginxpm:
+  nginx:
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx
     hostname: nginx
