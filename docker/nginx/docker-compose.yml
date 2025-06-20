@@ -11,8 +11,8 @@ networks:
 services:
   nginxpm:
     image: jc21/nginx-proxy-manager:latest
-    container_name: nginxpm
-    hostname: nginxpm
+    container_name: nginx
+    hostname: nginx
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
