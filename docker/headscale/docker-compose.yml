@@ -1,11 +1,3 @@
-volumes:
-  headscale_config:
-    external: true
-  headscale_lib:
-    external: true
-  headscale_run:
-    external: true
-    
 networks:
   reverse-proxy:
     external: true
@@ -22,7 +14,7 @@ services:
     volumes:
       # Please set <HEADSCALE_PATH> to the absolute path
       # of the previously created headscale directory.
-      - headscale_config:/etc/headscale
-      - headscale_lib:/var/lib/headscale
-      - headscale_run:/var/run/headscale
+      - ./config:/etc/headscale
+      - ./lib:/var/lib/headscale
+      - ./run:/var/run/headscale
     command: serve
