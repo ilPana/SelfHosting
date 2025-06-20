@@ -26,7 +26,7 @@ services:
       - ./run:/var/run/headscale
     command: serve
   headscale-ui:
-    image: ghcr.io/gurucompputing/headscale-ui:latest
+    image: ghcr.io/gurucomputing/headscale-ui:latest
     container_name: headscale-ui
     restart: unless-stopped
     environment:
