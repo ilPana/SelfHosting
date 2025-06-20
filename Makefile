@@ -33,7 +33,4 @@ nginx:
 	$(call docker_rebuild,"nginx")
 #Headscale
 headscale:
-	docker volume create headscale_config
-	docker volume create headscale_lib
-	docker volume create headscale_run
 	$(call docker_rebuild,"headscale")
