@@ -1,3 +1,10 @@
+volumes:
+  - caddy_data:
+      external: true
+  - caddy_config:
+      external: true
+  
+
 networks:
   reverse-proxy:
     external: true
@@ -18,3 +25,23 @@ services:
       - ./lib:/var/lib/headscale
       - ./run:/var/run/headscale
     command: serve
+  headscale-ui:
+    image: ghcr.io/gurucompputing/headscale-ui:latest
+    container_name: headscale-ui
+    restart: unless-stopped
+    environment:
+      - HTTPP_PORT=8080
+    ports:
+      -"8081:8080"
+#  caddy:
+#    image: caddy:alpine
+#    conteiner_name: caddy
+#    restart: unless-stopped
+#    ports:
+#      - "80:80"
+#      - "443_443"
+#    volumes:
+#      - ./Caddyfile:/etc/caddy/Caddyfile
+#      - caddy_data:/data
+#      - caddy_config:/config
+      
