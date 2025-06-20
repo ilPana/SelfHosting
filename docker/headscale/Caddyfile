@@ -1,0 +1,4 @@
+https://headscale.ilpana.ip-ddns.com {
+        reverse_proxy /web* http://headscale-ui:8080
+        reverse_proxy * http://headscale:8080
+}

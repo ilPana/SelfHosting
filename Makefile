@@ -33,6 +33,6 @@ nginx:
 	$(call docker_rebuild,"nginx")
 #Headscale
 headscale:
-#	docker volume create caddy_data
-#	docker volume create caddy_config
+	docker volume create caddy_data
+	docker volume create caddy_config
 	$(call docker_rebuild,"headscale")
