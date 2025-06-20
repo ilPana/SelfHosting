@@ -28,6 +28,6 @@ portainer:
 	$(call docker_rebuild,"portainer")
 # NGINX
 nginx:
-	docker volume create nginxpm_data
-	docker volume create nginxpm_letsencrypt
-	$(call docker_rebuild,"nginxpm")
+	docker volume create nginx_data
+	docker volume create nginx_letsencrypt
+	$(call docker_rebuild,"nginx")
