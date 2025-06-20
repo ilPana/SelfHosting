@@ -12,7 +12,7 @@ networks:
 
 services:
   headscale:
-    image: docker.io/headscale/headscale:<VERSION>
+    image: docker.io/headscale/headscale:latest
     restart: unless-stopped
     container_name: headscale
     hostname: headscale
