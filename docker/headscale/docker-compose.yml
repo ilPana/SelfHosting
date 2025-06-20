@@ -35,7 +35,7 @@ services:
       - "8081:8080"
   caddy:
     image: caddy:alpine
-    conteiner_name: caddy
+#    conteiner_name: caddy
     restart: unless-stopped
     ports:
       - "80:80"
