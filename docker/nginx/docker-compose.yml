@@ -12,13 +12,13 @@ services:
   nginxpm:
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx
-    hostname: nginx
+    hostname: nginxpm
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - nginxpm_data:/data
-      - nginxpm_letsencrypt:/etc/letsencrypt
+      - nginx_data:/data
+      - nginx_letsencrypt:/etc/letsencrypt
     networks:
       - reverse-proxy
     ports:
