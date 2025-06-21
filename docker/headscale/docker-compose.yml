@@ -21,6 +21,7 @@ services:
   headscale-ui:
     image: ghcr.io/gurucomputing/headscale-ui:latest
     container_name: headscale-ui
+    hostname: headscale-ui
     restart: unless-stopped
     environment:
       - HTTPP_PORT=8080
