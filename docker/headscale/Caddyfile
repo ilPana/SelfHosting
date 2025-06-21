@@ -2,3 +2,7 @@ https://headscale.ilpana.ip-ddns.com {
   reverse_proxy /web* http://headscale-ui:8080
   reverse_proxy * http://headscale:8080
 }
+
+https://headscale-ui.ilpana.ip-ddns.com {
+  reverse_proxy headscale-ui:8080
+}
