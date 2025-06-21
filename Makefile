@@ -34,3 +34,6 @@ nginx:
 #Headscale
 headscale:
 	$(call docker_rebuild,"headscale")
+#Headscale-ui
+headscale-ui:
+	$(call docker_rebuild,"headscale-ui")
