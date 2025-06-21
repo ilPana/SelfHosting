@@ -1,7 +1,3 @@
-networks:
-  reverse-proxy:
-    external: true
-
 services:
   headscale:
     image: docker.io/headscale/headscale:latest
