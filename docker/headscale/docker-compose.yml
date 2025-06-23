@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     container_name: headscale
     hostname: headscale
+    networks:
+      - reverse-proxy
     ports:
       - "0.0.0.0:8080:8080"
       - "0.0.0.0:9090:9090"
