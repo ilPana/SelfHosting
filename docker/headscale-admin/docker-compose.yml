@@ -4,9 +4,14 @@ networks:
 
 services:
   headscale-admin:
-    image: goodieshq/headscale-admin:0.25
+    image: goodieshq/headscale-admin:lastest
     container_name: headscale-admin
+    hostname: headscale-admin
     restart: unless-stopped
     networks:
       - reverse-proxy
-    
+    environment:
+      - HS_SERVER_URL=http://headscale:8080
+      - HS_API_KEY=F5uqeB9.LAP7p-NntKgVCqcUDCoXzkAkPghyR7HQ
+    expose:
+      - "3000"
