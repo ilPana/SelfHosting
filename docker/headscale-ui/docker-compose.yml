@@ -4,15 +4,13 @@ networks:
 
 services:
   headscale-ui:
-    image: ghcr.io/gurucomputing/headscale-ui:latest
+    image: ifargle/headscale-ui
     container_name: headscale-ui
-    hostname: headscale-ui
     restart: unless-stopped
     networks:
       - reverse-proxy
     environment:
-      - HTTP_PORT=8080
       - VITE_HEADSCALE_URL=https://headscale.panalab.ddns-ip.net
       - VITE_HEADSCALE_API_KEY=F5uqeB9.LAP7p-NntKgVCqcUDCoXzkAkPghyR7HQ
     ports:
-      - "8081:8080"
+      - "8081:80"
