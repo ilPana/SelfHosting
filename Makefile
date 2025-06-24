@@ -37,3 +37,5 @@ headscale:
 #Headscale-ui
 headscale-ui:
 	$(call docker_rebuild,"headscale-ui")
+headscale-admin:
+	$(call docker_rebuild,"headscale-admin")
