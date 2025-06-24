@@ -12,5 +12,7 @@ services:
       - reverse-proxy
     environment:
       - HTTPP_PORT=8080
+      - VITE_HEADSCALE_URL=https://headscale.panalab.ddns-ip.net
+      - VITE_HEADSCALE_API_KEY=F5uqeB9.LAP7p-NntKgVCqcUDCoXzkAkPghyR7HQ
     ports:
       - "8081:8080"
