@@ -4,7 +4,7 @@ networks:
 
 services:
   headscale-admin:
-    image: goodieshq/headscale-admin:lastest
+    image: goodieshq/headscale-admin:0.25
     container_name: headscale-admin
     hostname: headscale-admin
     restart: unless-stopped
